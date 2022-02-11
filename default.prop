@@ -1,16 +1,16 @@
 #
 # ADDITIONAL VENDOR DEFAULT PROPERTIES
 #
-ro.vndk.version=29
+ro.vndk.version=30
+persist.sys.usb.config=mtp
 ro.adb.secure=1
 ro.oem_unlock_supported=1
-persist.sys.usb.config=mtp
+vendor.usb.diag.func.name=diag
 ro.zygote=zygote32
 ro.logd.size.stats=64K
 log.tag.stats_log=I
 ro.radio.noril=no
 ro.vendor.epdg.support=true
-ro.logdumpd.enabled=0
 ro.bionic.arch=arm
 ro.bionic.cpu_variant=cortex-a53
 ro.bionic.2nd_arch=

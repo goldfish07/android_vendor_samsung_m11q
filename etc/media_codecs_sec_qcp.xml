@@ -16,24 +16,24 @@
 
 <MediaCodecs>
     <Decoders>
-        <MediaCodec name="OMX.SEC.qcelp.dec">
+        <MediaCodec name="OMX.SEC.qcelp.dec" rank="2">
             <Type name="audio/qcelp" />
             <Quirk name="needs-flush-before-disable" />
             <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
-        <MediaCodec name="OMX.SEC.evrc.dec">
+        <MediaCodec name="OMX.SEC.evrc.dec" rank="2">
             <Type name="audio/evrc" />
             <Quirk name="needs-flush-before-disable" />
             <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
     </Decoders>
     <Encoders>
-        <MediaCodec name="OMX.SEC.qcelp.enc">
+        <MediaCodec name="OMX.SEC.qcelp.enc" rank="2">
             <Type name="audio/qcelp" />
             <Quirk name="requires-allocate-on-input-ports" />
             <Quirk name="requires-allocate-on-output-ports" />
         </MediaCodec>
-        <MediaCodec name="OMX.SEC.evrc.enc">
+        <MediaCodec name="OMX.SEC.evrc.enc" rank="2">
             <Type name="audio/evrc" />
             <Quirk name="requires-allocate-on-input-ports" />
             <Quirk name="requires-allocate-on-output-ports" />

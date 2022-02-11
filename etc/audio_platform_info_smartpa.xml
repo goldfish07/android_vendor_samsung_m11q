@@ -48,7 +48,7 @@
         <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="35"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="35"/>
 	<!-- HS70-24 aw smartpa porting by xuyuqing at 2019/11/01 start -->
-	<usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="59"/>
+	<usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="60"/>
 	<!-- HS70-24 aw smartpa porting by xuyuqing at 2019/11/01 end -->
     </pcm_ids>
     <config_params>
@@ -85,7 +85,7 @@
 	<device name="SND_DEVICE_OUT_HEADPHONES_VOIP" acdb_id="201"/>
 	<!-- huaqin custom voip headphones by xuyuqing at 2020/05/18 end -->
 	<!-- huaqin add HS50-757 custom voip headphones by xuyuqing at 2020/09/01 start -->
-	<device name="SND_DEVICE_OUT_HEADPHONES_VOIP_2" acdb_id="10"/>
+	<device name="SND_DEVICE_OUT_HEADPHONES_VOIP_2" acdb_id="201"/>
 	<!-- huaqin add HS50-757 custom voip headphones by xuyuqing at 2020/09/01 end -->
     </acdb_ids>
 
@@ -117,7 +117,7 @@
 	<device name="SND_DEVICE_OUT_HANDSET_VOIP" interface="PRI_MI2S_RX"/>
 	<!-- huaqin add HS50-757 custom voip handset by xuyuqing at 2020/09/01 end -->
         <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker" interface="QUIN_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_FM" interface="QUIN_MI2S_RX"/>
+	<device name="SND_DEVICE_OUT_SPEAKER_FM" interface="QUIN_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" interface="QUIN_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_VBAT" interface="QUIN_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" interface="PRI_MI2S_RX"/>

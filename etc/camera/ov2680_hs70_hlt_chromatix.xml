@@ -106,17 +106,19 @@ special_mode_mask values:
       <A3Preview>ov2680_hs70_hlt_mix_zsl_preview_3a</A3Preview>
       <A3Video>ov2680_hs70_hlt_mix_zsl_video_3a</A3Video>
     </ChromatixName>
+<!--#HS70 code for camera mix mode by xuxianwei at 2021/02/08 start-->
     <ChromatixName sensor_resolution_index="2" special_mode_mask="0">
-      <ISPPreview>ov2680_hs70_hlt_preview</ISPPreview>
-      <ISPSnapshot>ov2680_hs70_hlt_preview</ISPSnapshot>
-      <ISPVideo>ov2680_hs70_hlt_default_video</ISPVideo>
-      <CPPPreview>ov2680_hs70_hlt_cpp_preview</CPPPreview>
-      <CPPSnapshot>ov2680_hs70_hlt_cpp_snapshot</CPPSnapshot>
-      <CPPVideo>ov2680_hs70_hlt_cpp_video</CPPVideo>
-      <CPPLiveshot>ov2680_hs70_hlt_cpp_liveshot</CPPLiveshot>
-      <A3Preview>ov2680_hs70_hlt_default_preview_3a</A3Preview>
-      <A3Video>ov2680_hs70_hlt_default_video_3a</A3Video>
+      <ISPPreview>ov2680_hs70_hlt_mix_snapshot</ISPPreview>
+      <ISPSnapshot>ov2680_hs70_hlt_mix1_snapshot</ISPSnapshot>
+      <ISPVideo>ov2680_hs70_hlt_mix_default_video</ISPVideo>
+      <CPPPreview>ov2680_hs70_hlt_mix_cpp_preview</CPPPreview>
+      <CPPSnapshot>ov2680_hs70_hlt_mix1_cpp_snapshot</CPPSnapshot>
+      <CPPVideo>ov2680_hs70_hlt_mix_cpp_video</CPPVideo>
+      <CPPLiveshot>ov2680_hs70_hlt_mix_cpp_liveshot</CPPLiveshot>
+      <A3Preview>ov2680_hs70_hlt_mix1_zsl_preview_3a</A3Preview>
+      <A3Video>ov2680_hs70_hlt_mix_zsl_video_3a</A3Video>
     </ChromatixName>
+<!--#HS70 code for camera mix mode by xuxianwei at 2021/02/08 end-->
     <ChromatixName sensor_resolution_index="3" special_mode_mask="0">
       <ISPPreview>ov2680_hs70_hlt_hfr_60</ISPPreview>
       <ISPSnapshot>ov2680_hs70_hlt_hfr_60</ISPSnapshot>

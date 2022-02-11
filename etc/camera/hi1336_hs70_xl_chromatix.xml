@@ -257,6 +257,19 @@ special_mode_mask values:
       <A3Video>hi1336_hs70_xl_mix_bokeh_fullsize_video_3a</A3Video>
     </ChromatixName>
 <!--#HS70 code for camera mix for dual_cam by gaozhenyu at 2020/03/18 end-->
+<!--#HS70 code for camera mix mode by xuxianwei at 2021/02/08 start-->
+<ChromatixName sensor_resolution_index="5" special_mode_mask="0">
+      <ISPPreview>hi1336_hs70_xl_mix_bokeh_snapshot</ISPPreview>
+      <ISPSnapshot>hi1336_hs70_xl_mix1_bokeh_snapshot</ISPSnapshot>
+      <ISPVideo>hi1336_hs70_xl_mix_bokeh_default_video</ISPVideo>
+      <CPPPreview>hi1336_hs70_xl_mix_bokeh_cpp_preview</CPPPreview>
+      <CPPSnapshot>hi1336_hs70_xl_mix1_bokeh_cpp_snapshot</CPPSnapshot>
+      <CPPVideo>hi1336_hs70_xl_mix_bokeh_cpp_video</CPPVideo>
+      <CPPLiveshot>hi1336_hs70_xl_mix_bokeh_cpp_liveshot</CPPLiveshot>
+      <A3Preview>hi1336_hs70_xl_mix1_bokeh_fullsize_preview_3a</A3Preview>
+      <A3Video>hi1336_hs70_xl_mix_bokeh_fullsize_video_3a</A3Video>
+    </ChromatixName>
+<!--#HS70 code for camera mix mode by xuxianwei at 2021/02/08 end-->
   </ResolutionChromatixInfo>
 </ChromatixConfigurationRoot>
 <!-- HS60 code for HS60-46 by xuxianwei at 20190904 end -->

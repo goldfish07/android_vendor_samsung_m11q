@@ -701,6 +701,7 @@ LensInfo : Information of the lens present in the module.
     </LensInfo>
 <!-- HS70 code for HS70-430 by xionggengen at 2019/10/30 end-->
   </CameraModuleConfig>
+<!-- HS70 code for HS70-533 by xiayu at 2019/11/13 start-->
 <CameraModuleConfig>
     <CameraId>2</CameraId>
     <SensorName>gc8034_hs70_jk</SensorName>

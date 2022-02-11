@@ -16,7 +16,7 @@
 
 <MediaCodecs>
     <Decoders>
-        <MediaCodec name="OMX.SEC.amr.dec" rank="1">
+        <MediaCodec name="OMX.SEC.amr.dec" rank="2">
             <Type name="audio/amr-wb">
                 <Limit name="channel-count" max="1" />
                 <Limit name="sample-rate" ranges="16000" />
@@ -27,10 +27,8 @@
                 <Limit name="sample-rate" ranges="8000" />
                 <Limit name="bitrate" range="4750-12200" />
             </Type>
-            <Quirk name="needs-flush-before-disable" />
-            <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
-        <MediaCodec name="OMX.SEC.mp3.dec" rank="1">
+        <MediaCodec name="OMX.SEC.mp3.dec" rank="2">
             <Type name="audio/mpeg">
                 <Limit name="channel-count" max="2" />
                 <Limit name="sample-rate" ranges="8000-48000" />
@@ -46,29 +44,23 @@
                 <Limit name="sample-rate" ranges="8000-48000" />
                 <Limit name="bitrate" range="8000-384000" />
             </Type>
-            <Quirk name="needs-flush-before-disable" />
-            <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
-        <MediaCodec name="OMX.SEC.flac.dec" type="audio/flac" rank="1">
+        <MediaCodec name="OMX.SEC.flac.dec" type="audio/flac" rank="2">
             <Limit name="channel-count" max="8" />
             <Limit name="sample-rate" ranges="1-655350" />
             <Limit name="bitrate" range="1-21000000" />
-            <Quirk name="needs-flush-before-disable" />
-            <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
-        <MediaCodec name="OMX.SEC.wma.dec" type="audio/x-ms-wma"  rank="1">
-            <Limit name="channel-count" max="6" />
-            <Limit name="sample-rate" ranges="8000-96000" />
-            <Limit name="bitrate" range="1-21000000" />
-            <Quirk name="needs-flush-before-disable" />
-            <Quirk name="decoder-ignores-streamcorrupt-error" />
-        </MediaCodec>
-        <MediaCodec name="OMX.SEC.adpcm.dec" type="audio/x-ima"  rank="1">
+        <MediaCodec name="OMX.SEC.adpcm.dec" type="audio/x-ima"  rank="2">
             <Limit name="channel-count" max="2" />
             <Limit name="sample-rate" ranges="8000-48000" />
             <Limit name="bitrate" range="5000-384000" />
-            <Quirk name="needs-flush-before-disable" />
-            <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
     </Decoders>
+    <Encoders>
+        <MediaCodec name="OMX.SEC.naac.enc" type="audio/mp4a-latm" rank="16">
+            <Limit name="channel-count" max="6" />
+            <Limit name="sample-rate" ranges="8000-96000" />
+            <Limit name="bitrate" range="8000-960000" />
+        </MediaCodec>
+    </Encoders>
 </MediaCodecs>

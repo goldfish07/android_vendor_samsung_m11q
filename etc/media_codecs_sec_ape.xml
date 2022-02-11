@@ -16,7 +16,7 @@
 
 <MediaCodecs>
     <Decoders>
-        <MediaCodec name="OMX.SEC.ape.dec">
+        <MediaCodec name="OMX.SEC.ape.dec" rank="2">
             <Type name="audio/x-ape" />
             <Quirk name="needs-flush-before-disable" />
             <Quirk name="decoder-ignores-streamcorrupt-error" />

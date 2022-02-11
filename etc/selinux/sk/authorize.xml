@@ -2,27 +2,31 @@
 <policy>
     <service name="DevicePolicyManagerService">
         <method name="getProfileOwner">
-            <package name="com.google.android.gms" seinfo="gmscore"/>
-            <package name="com.android.vending" seinfo="gmscore"/>
+            <package name="com.google.android.gms" seinfo="untrusted"/>
+            <package name="com.google.android.gms" seinfo="default"/>
+            <package name="com.android.vending" seinfo="untrusted"/>
+            <package name="com.android.vending" seinfo="default"/>
             <package name="com.google.android.apps.enterprise.dmagent" seinfo="untrusted"/>
+            <package name="com.google.android.apps.enterprise.dmagent" seinfo="default"/>
             <package name="com.sec.downloadablekeystore" seinfo="platform"/>
             <package name="com.sec.android.preloadinstaller" seinfo="platform"/>
         </method>
 
-		<method name="getDeviceOwnerComponent">
-			<package name="com.google.android.gms" seinfo="gmscore"/>
-		</method>
+        <method name="getDeviceOwnerComponent">
+            <package name="com.google.android.gms" seinfo="untrusted"/>
+            <package name="com.google.android.gms" seinfo="default"/>
+        </method>
     </service>
 
     <service name="TimaService">
         <method name="attestation">
+            <package name="com.sec.enterprise.knox.attestation" seinfo="platform" />
             <package name="com.samsung.android.knox.attestation" seinfo="platform" />
         </method>
         <method name="checkAttestationAccessPermission">
-            <package name="com.samsung.android.spayfw" seinfo="system" />
-            <package name="com.samsung.android.spayfw" seinfo="spay" />
-            <package name="com.samsung.android.spay" seinfo="spay" />
-            <package name="com.samsung.android.spaymini" seinfo="spay" />
+            <package name="com.samsung.android.spayfw" seinfo="platform" />
+            <package name="com.samsung.android.spay" seinfo="platform" />
+            <package name="com.samsung.android.spaymini" seinfo="platform" />
             <package name="com.sec.enterprise.knox.cloudmdm.smdms" seinfo="platform" />
             <package name="com.samsung.klmsagent" seinfo="platform" />
         </method>
@@ -44,6 +48,7 @@
             <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
             <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
             <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.appseparation" seinfo="platform" />
         </method>
 
         <method name="getAttributes">
@@ -226,6 +231,23 @@
             <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
             <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
         </method>
+
+        <method name="isPasswordSufficientAfterKnoxProfileUnification">
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="CMFALock">
+            <package name="com.samsung.android.cmfa.framework" seinfo="platform" />
+            <package name="com.samsung.android.cmfa.framework" seinfo="shared" />
+        </method>
+
+        <method name="CMFAUnLock">
+            <package name="com.samsung.android.cmfa.framework" seinfo="platform" />
+            <package name="com.samsung.android.cmfa.framework" seinfo="shared" />
+        </method>
     </service>
 
     <service name="RCPManagerService">
@@ -381,6 +403,7 @@
         </method>
 
         <method name="copyFile">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
             <package name="com.samsung.knox.rcp.components" seinfo="platform" />
             <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
             <package name="com.sec.knox.foldercontainer" seinfo="platform" />
@@ -393,6 +416,7 @@
             <package name="com.samsung.knox.securefolder" seinfo="platform" />
             <package name="com.samsung.android.knoxcts" seinfo="platform" />
             <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
         </method>
 
         <method name="moveFile">
@@ -402,6 +426,7 @@
             <package name="com.sec.knoxcts.pal.service" seinfo="platform" />
             <package name="com.samsung.android.knoxcts" seinfo="platform" />
             <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
         </method>
 
         <method name="isFileExist">
@@ -574,6 +599,9 @@
             <package name="com.samsung.android.gear360viewer" seinfo="platform" />
             <package name="com.samsung.knox.securefolder" seinfo="platform" />
             <package name="com.sec.android.app.voicenote" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
         </method>
     </service>
 
@@ -699,6 +727,7 @@
         </method>
 
         <method name="copyFile">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
             <package name="com.samsung.knox.rcp.components" seinfo="platform" />
             <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
             <package name="com.sec.knox.bluetooth" seinfo="platform" />
@@ -710,6 +739,7 @@
             <package name="com.samsung.knox.securefolder" seinfo="platform" />
             <package name="com.samsung.android.knoxcts" seinfo="platform" />
             <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
         </method>
 
         <method name="moveFile">
@@ -719,6 +749,7 @@
             <package name="com.sec.knoxcts.pal.service" seinfo="platform" />
             <package name="com.samsung.android.knoxcts" seinfo="platform" />
             <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
         </method>
 
         <method name="getErrorMessage">
@@ -776,6 +807,9 @@
             <package name="com.samsung.knox.rcp.components" seinfo="platform" />
             <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
             <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
         </method>
 
         <method name="moveFilesForApp">
@@ -795,6 +829,9 @@
             <package name="com.samsung.android.gear360viewer" seinfo="platform" />
             <package name="com.samsung.knox.securefolder" seinfo="platform" />
             <package name="com.sec.android.app.voicenote" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
         </method>
 
         <method name="getFiles">
@@ -1646,55 +1683,13 @@
 
 
     <service name="SEAMS">
-        <method name="activateDomain">
-            <seinfo value="good_trustonicpartner" />
-        </method>
-
-        <method name="addAppToContainer">
-            <seinfo value="gsd" />
-        </method>
-
-        <method name="deActivateDomain">
-            <seinfo value="gsd" />
-        </method>
-
-        <method name="getActivationStatus">
-            <seinfo value="gsd" />
-            <seinfo value="good_trustonicpartner" />
-        </method>
-
-        <method name="getSEContainerIDsFromPackageName">
-            <seinfo value="good_trustonicpartner" />
-            <seinfo value="gsd" />
-        </method>
-
-        <method name="getPackageNamesFromSEContainer">
-            <seinfo value="good_trustonicpartner" />
-            <seinfo value="gsd" />
-        </method>
-
-        <method name="getSEContainerIDs">
-            <seinfo value="good_trustonicpartner" />
-            <seinfo value="gsd" />
-            <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
-            <package name="com.samsung.android.irm.service" seinfo="platform" />
-        </method>
-
-        <method name="removeAppFromContainer">
-            <seinfo value="gsd" />
-        </method>
-
-        <method name="setBBCFlag">
+        <method name="changeAppDomain">
             <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
         </method>
 
         <method name="getSeinfo">
             <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
-        </method>
-
-        <method name="changeAppDomain">
-            <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
-        </method>
+        </method>    
     </service>
 
     <service name="KnoxMUMContainerPolicy">
@@ -1860,30 +1855,30 @@
 
     <service name="FirewallPolicy">
         <method name="saveURLBlockedReport">
-            <package name="com.android.chrome" seinfo="chrome" />
-            <package name="com.android.chrome" seinfo="gtd" />
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
         </method>
 
         <method name="getURLFilterEnabled">
-            <package name="com.android.chrome" seinfo="chrome" />
-            <package name="com.android.chrome" seinfo="gtd" />
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
         </method>
 
         <method name="getURLFilterReportEnabled">
-            <package name="com.android.chrome" seinfo="chrome" />
-            <package name="com.android.chrome" seinfo="gtd" />
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
         </method>
 
         <method name="getURLFilterList">
-            <package name="com.android.chrome" seinfo="chrome" />
-            <package name="com.android.chrome" seinfo="gtd" />
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
         </method>
     </service>
 
     <service name="CertificatePolicy">
         <method name="notifyCertificateFailure">
-            <package name="com.android.chrome" seinfo="chrome" />
-            <package name="com.android.chrome" seinfo="gtd" />
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
         </method>
     </service>
 
@@ -1899,6 +1894,7 @@
         <method name="C_SignInit">
             <package name="com.samsung.pasc" seinfo="release" />
             <package name="com.f5.edge.client_ics" seinfo="untrusted" />
+            <package name="com.f5.edge.client_ics" seinfo="default" />
             <package name="com.samsung.android.oneconnect" seinfo="platform" />
         </method>
     </service>
@@ -1916,10 +1912,9 @@
             <package name="com.samsung.klmsagent" seinfo="platform" />
             <package name="com.sec.enterprise.knox.cloudmdm.smdms" seinfo="platform" />
             <package name="com.sec.enterprise.knox.express" seinfo="platform" />
-            <package name="com.samsung.android.spayfw" seinfo="system" />
-            <package name="com.samsung.android.spayfw" seinfo="spay" />
-            <package name="com.samsung.android.spay" seinfo="spay" />
-            <package name="com.samsung.android.spaymini" seinfo="spay" />
+            <package name="com.samsung.android.spayfw" seinfo="platform" />
+            <package name="com.samsung.android.spay" seinfo="platform" />
+            <package name="com.samsung.android.spaymini" seinfo="platform" />
             <package name="com.samsung.ucm.baiplugin" seinfo="platform" />
             <package name="com.samsung.android.oneconnect" seinfo="platform" />
             <package name="com.samsung.android.knox.analytics.uploader" seinfo="platform" />
@@ -1928,8 +1923,8 @@
 
     <service name="AuditLogService">
         <method name="AuditLogger">
-            <package name="com.android.chrome" seinfo="chrome" />
-            <package name="com.android.chrome" seinfo="gtd" />
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
             <package name="com.android.bluetooth" seinfo="platform" />
         </method>
     </service>
@@ -1937,88 +1932,71 @@
     <service name="SdpManagerService">
         <method name="SdpHandler">
             <seinfo value="platform" />
-            <seinfo value="_container" />
             <seinfo value="shared" />
             <package name="com.android.settings" seinfo="platform" />
         </method>
 
         <method name="isSensitiveColumn">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="addColumn">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="onBoot">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="onDeviceLocked">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="onDeviceUnlocked">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="onChangePassword">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="onUserAdded">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="onUserRemoved">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="getState">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="isSDPEnabled">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="setSensitiveFileInfo">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="setSensitiveDBInfo">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="getSensitiveFileInfo">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="getSensitiveDBInfo">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="setSDPMigrating">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
         <method name="isSdpMigrating">
-            <seinfo value="_container" />
             <seinfo value="platform" />
         </method>
 
@@ -2038,21 +2016,22 @@
 
     <service name="SdpLogService">
         <method name="enqPayload">
-            <seinfo value="_container" />
             <seinfo value="platform" />
             <seinfo value="aasa_platform" />
         </method>
     </service>
 
     <service name="PaymentManagerService">
-        <package name="com.samsung.android.spayfw" seinfo="spay" />
-        <package name="com.samsung.android.spay" seinfo="spay" />
-        <package name="com.samsung.android.spaymini" seinfo="spay" />
+        <package name="com.samsung.android.spayfw" seinfo="platform" />
+        <package name="com.samsung.android.spay" seinfo="platform" />
+        <package name="com.samsung.android.spaymini" seinfo="platform" />
         <package name="com.samsung.android.coldwalletservice" seinfo="platform" />
     </service>
 
     <service name="BlockchainTZService">
         <package name="com.samsung.android.coldwalletservice" seinfo="platform" />
+        <package name="com.samsung.android.digitalkey" seinfo="platform" />
+        <package name="com.samsung.android.carkey" seinfo="platform" />
     </service>
 
 
@@ -2060,7 +2039,7 @@
         <!-- Since additional callers can be added later, this needs to be maintained in a way such that it can be updated without FOTA.
              So, Mac_permissions.xml (can be updated through SPD) verifies the signature, package name and assigns a seinfo.
              Authorize.xml depends on this seinfo and does not have a check for package name -->
-        <seinfo value="spay" />
+        <seinfo value="platform" />
     </service>
 
 
@@ -2126,30 +2105,34 @@
             <package name="com.sec.android.app.shealth" seinfo="release"/>
             <package name="com.sec.android.app.shealth" seinfo="shealth"/>
             <package name="com.android.managedprovisioning" seinfo="platform"/>
-            <package name="com.samsung.android.spay" seinfo="spay"/>
-            <package name="com.samsung.android.spaymini" seinfo="spay" />
+            <package name="com.samsung.android.spay" seinfo="platform"/>
+            <package name="com.samsung.android.spaymini" seinfo="platform" />
             <package name="com.samsung.knox.securefolder" seinfo="platform"/>
             <package name="com.samsung.cts.SamsungKnoxTimaIccc" seinfo="platform"/>
             <package name="com.samsung.sept.KNOX" seinfo="platform"/>
             <package name="com.samsung.iccctest" seinfo="platform"/>
             <package name="com.samsung.android.authfw" seinfo="platform"/>
             <package name="com.sec.android.soagent" seinfo="platform"/>
+            <package name="com.sec.android.diagmonagent" seinfo="platform"/>
             <package name="com.samsung.android.app.mobiledoctor" seinfo="platform"/>
             <package name="com.samsung.android.bbc.bbcagent" seinfo="platform"/>
-            <package name="com.samsung.android.spayfw" seinfo="system"/>
-            <package name="com.samsung.android.spayfw" seinfo="spay"/>
+            <package name="com.samsung.android.spayfw" seinfo="platform"/>
             <package name="com.samsung.android.lxd" seinfo="platform"/>
             <package name="com.sec.indiaidentity" seinfo="platform"/>
+        </method>
+
+        <method name="setAttestationData">
+            <package name="com.samsung.android.knox.attestation" seinfo="platform"/>
         </method>
     </service>
 
     <service name="FilteredAPIs">
         <method name="queryPhoneLookupEnterpriseForKnox"/>
         <method name="getProfileOwner"/>
+        <method name="getDeviceOwnerComponent"/>
         <method name="isTimaKeystoreEnabled"/>
         <method name="isCallerInfoBrowsingAllow"/>
         <method name="isBluetoothEnterpriseContactSharingDisabled"/>
         <method name="openCorpContactPicture"/>
-        <method name="getDeviceOwnerComponent"/>
     </service>
 </policy>

@@ -2,8 +2,9 @@
     Input:
         compatibility_matrix.xml
         device_compatibility_matrix.xml
+        vendor.samsung.frameworks.codecsolution-matrix.xml
 -->
-<compatibility-matrix version="1.0" type="device">
+<compatibility-matrix version="2.0" type="device">
     <hal format="hidl" optional="false">
         <name>android.frameworks.schedulerservice</name>
         <version>1.0</version>
@@ -77,11 +78,26 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.qccsyshal</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQccsyshal</name>
+            <instance>qccsyshal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.sigma_miracast</name>
         <version>1.0</version>
         <interface>
             <name>Isigma_miracast</name>
             <instance>sigmahal</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.frameworks.codecsolution</name>
+        <interface>
+            <name>ISehCodecSolution</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -93,7 +109,7 @@
         </interface>
     </hal>
     <vendor-ndk>
-        <version>29</version>
+        <version>30</version>
     </vendor-ndk>
     <system-sdk>
         <version>29</version>

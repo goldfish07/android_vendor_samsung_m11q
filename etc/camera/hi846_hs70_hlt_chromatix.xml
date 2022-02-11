@@ -94,7 +94,7 @@ special_mode_mask values:
       <CPPVideo>hi846_hs70_hlt_cpp_video</CPPVideo>
       <A3Preview>hi846_hs70_hlt_zsl_preview</A3Preview>
       <A3Video>hi846_hs70_hlt_zsl_video</A3Video>
-      <!--#HS70 code for HS70-1663 by chengzhi at 2020/02/17 start-->
+      <!--#HS70 code for HS70-1663 by chengzhi at 2019/12/01 start-->
       <TMOISPPreview>hi846_hs70_hlt_tmo_snapshot</TMOISPPreview>
       <TMOISPSnapshot>hi846_hs70_hlt_tmo_snapshot</TMOISPSnapshot>
       <TMOISPVideo>hi846_hs70_hlt_tmo_default_video</TMOISPVideo>
